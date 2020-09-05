@@ -1,0 +1,46 @@
+
+.TodoForm {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.TodoForm * {
+    font-family: 'Quicksand' !important;
+}
+
+.TodoForm #todoText {
+    padding: 10px;
+    border: none;
+    flex-grow: 1;
+}
+.TodoForm #todoText:focus {
+    outline: none;
+}
+
+.TodoForm button[type="submit"] {
+    background-color: transparent;
+    border: 1px solid var(--textCol);
+    padding: 8px 12px;
+    color: var(--textCol);
+    margin-left: 4px;
+    width: 100px;
+    transition: all .15s ease-out;
+}
+.TodoForm button[type="submit"]:hover:not(:disabled) {
+    background-color: var(--textCol);
+    color: var(--bgColDark);
+}
+.TodoForm button[type="submit"]:active {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.TodoForm button[type="submit"]:focus {
+    outline: none;
+}
+.TodoForm button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: default;
+}

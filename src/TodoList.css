@@ -1,0 +1,36 @@
+.TodoList {
+    margin: 128px auto;
+    max-width: 400px;
+    padding: 36px 0px;
+    color: var(--textCol);
+    background: linear-gradient(-45deg, var(--bgCol), var(--bgColDark));
+    box-shadow: -7px -7px 0px 1px var(--shadowCol);
+}
+
+.TodoList > .titlePanel {
+    width: 100%;
+    padding: 0 36px;
+    text-align: left;
+}
+
+.TodoList > .titlePanel .title {
+    margin-bottom: 4px;
+    font-size: 36px;
+}
+
+.TodoList > .titlePanel .bottomLine {
+    height: 1px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--textCol);
+    opacity: 0.5;
+}
+
+.TodoList .Todos {
+    margin-top: 36px;
+}
+
+.TodoList .add-form {
+    height: 40px;
+    margin:36px 36px 0px;
+}

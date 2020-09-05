@@ -1,0 +1,97 @@
+.Todo {
+  padding: 0 36px;
+  margin-top: 4px;
+  background-color: var(--todoBgCol);
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+  animation: .3s ease-in 1 expand;
+}
+@keyframes expand {
+  0% {
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  100% {
+    height: 60px;
+  }
+}
+
+.Todo.deleting {
+    opacity: 0;
+}
+.Todo.shrinking {
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.Todo .edit-form {
+  height: 40px;
+  width: 100%;
+}
+
+.Todo .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  animation: .3s ease-in 1 appear;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Todo .row .todoText {
+  flex-grow: 1;
+  transition: all 0.3 ease-out;
+  cursor: default;
+}
+.Todo .row .todoText .checked {
+  position: relative;
+}
+.Todo .row .todoText .checked::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--textCol);
+  animation-name: strike;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.Todo .row i {
+  margin-left: 16px;
+  transition: all 0.15s ease-out;
+}
+.Todo .row i:hover {
+  color: var(--bgColDark);
+  cursor: pointer;
+}
+.Todo .row i:active {
+  color: var(--textCol);
+  opacity: 0.6;
+}
